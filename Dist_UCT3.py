@@ -626,10 +626,8 @@ def UCTPlayGame():
         if state.playerJustMoved == 1:
             m = Dist_UCT(rootstate = state, itermax = 10, verbose = False) #player 2 play with values for itermax and verbose = True
         else:
-            #m = UCT(rootstate = state, itermax = 1000, verbose = False)        #player 1
-            string = raw_input("Your move")#UCT(rootstate = state, itermax = 1000, verbose = False) # play with values for itermax and verbose = True
-            ml = string.split(',')
-            m = (int(ml[0]), int(ml[1]))
+            m = UCT(rootstate = state, itermax = 1000, verbose = False)        #player 1
+            
             
         elapsed_time = time.time() - start_time
         if state.playerJustMoved == 1:
